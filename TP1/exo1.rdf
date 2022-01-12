@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:info="http://www.m1ws.com/techno#">
+    <rdf:Description rdf:about="http://www.m1ws.com/catalogue#H77MA">
+        <info:nom>H77MA</info:nom>
+        <info:socket rdf:resource="http://www.m1ws.com/techno#Socket115"/>
+        <info:port rdf:resource="http://www.m1ws.com/techno#PCI"/>
+        <info:port rdf:resource="http://www.m1ws.com/techno#PCIExpress16x"/>
+        <info:port rdf:resource="http://www.m1ws.com/techno#PCIExpress1x"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.m1ws.com/catalogue#GF7800">
+        <info:nom>GF7800</info:nom>
+        <info:connecteur rdf:resource="http://www.m1ws.com/techno#DVI"/>
+        <info:connecteur rdf:resource="http://www.m1ws.com/techno#PVGA"/>
+         <info:port rdf:resource="http://www.m1ws.com/techno#PCIExpress16x"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+    
+
+triplets 
+<http://www.cartes_meres.com/type#H77MA>
+<http://www.cartes_meres.com/caracte#socket> "LGA1155"

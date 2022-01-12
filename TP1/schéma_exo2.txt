@@ -1,0 +1,70 @@
+Classes
+
+
+http://m1ws/techno#Composant
+
+
+http://m1ws/techno#CarteMere
+    Instances
+        http://m1ws/catalogue#H77MA
+    SousClassesDe http://m1ws/techno#Composant
+
+
+
+
+http://m1ws/techno#CarteGraphique
+    Instances
+        http://m1ws/catalogue#GF7800
+    SousClassesDe http://m1ws/techno#Composant
+
+
+
+http://m1ws/techno#ConnecteurVideo
+    Instances
+        http://m1ws/techno#VGA
+        http://m1ws/techno#DVI
+
+
+
+http://m1ws/techno#Socket
+    Instances
+          http://m1ws/techno#Socket1155
+
+
+
+http://m1ws/techno#PortExtension
+    Instances
+        http://m1ws/techno#PCIExpress16x
+        http://m1ws/techno#PCIExpress1x
+        http://m1ws/techno#PCI
+
+
+
+
+Propriétés
+
+http://m1ws/techno#apournom
+    Domain http://m1ws/techno#Composant
+    Range  http://www.w3.org/2001/XLMSchema#string
+
+
+http://m1ws/techno#apourport
+    Domain http://m1ws/techno#Composant
+    Range  http://m1ws/techno#PortExtension
+
+
+
+http://m1ws/techno#apoursocket
+    Domaine http://m1ws/techno#CarteMere
+    Range   http://m1ws/techno#Socket
+
+
+
+http://m1ws/techno#apourconnecteur
+    Domain http://m1ws/techno#CarteGraphique
+    Range http://m1ws/techno#ConnecteurVideo
+
+
+http://m1ws/techno#apourprix
+    Domain http://m1ws/techno#Composant
+    Range  http://www.w3.org/2001/XLMSchema#float
