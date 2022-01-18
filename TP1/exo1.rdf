@@ -2,6 +2,7 @@
 <rdf:RDF
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:info="http://www.m1ws.com/techno#">
+    
     <rdf:Description rdf:about="http://www.m1ws.com/catalogue#H77MA">
         <info:nom>H77MA</info:nom>
         <info:socket rdf:resource="http://www.m1ws.com/techno#Socket115"/>

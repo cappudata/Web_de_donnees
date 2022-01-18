@@ -1,26 +1,135 @@
 <?xml version="1.0"?>
 <rdf:RDF
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:info="http://www.m1ws.com/techno#">
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:techno="http://www.m1ws.com/techno#"
+    xmlns:catalogue="http://www.m1ws.com/catalogue#">
 
-
-    <rdf:Description rdf:about="http://www.m1ws.com/catalogue#H77MA">
+    <!-- CLASSES -->
+    <!-- Composant -->
+    <rdf:Description rdf:about="http://www.m1ws.com/techno#Composant">
         <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-        <rdf:subClassOf rdf:resource="#CarteMere"/>
-
-        <info:nom>H77MA</info:nom>
+    </rdf:Description>
 
 
+    <!-- Carte Mere -->
+    <rdf:Description rdf:about="http://www.m1ws.com/techno#CarteMere">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+        <rdfs:subClassOf rdf:resource="http://www.m1ws.com/techno#Composant" />
+    </rdf:Description>
+
+
+    <!-- Carte Graphique -->
+    <rdf:Description rdf:about="http://www.m1ws.com/techno#CarteGraphique">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+        <rdfs:subClassOf rdf:resource="http://www.m1ws.com/techno#Composant"/>
+    </rdf:Description>
+
+
+    <!-- Connecteur Video -->
+    <rdf:Description rdf:about="http://www.m1ws.com/techno#ConnecteurVideo">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    </rdf:Description>
+
+
+    <!-- Socket -->
+    <rdf:Description rdf:about="http://www.m1ws.com/techno#Socket">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    </rdf:Description>
+
+
+    <!-- Port Extension -->
+     <rdf:Description rdf:about="http://www.m1ws.com/techno#PortExtension">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
     </rdf:Description>
 
 
 
+    <!-- PROPRIETES -->
+    <!-- Nom -->
+    <rdf:Description rdf:about="http://www.m1ws.com/techno#apournom">
+        <rdfs:domain rdf:resource="http://www.m1ws.com/techno#Composant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XLMSchema#string"/>
+    </rdf:Description>
+
+
+    <!-- Port -->
+    <rdf:Description rdf:about="http://www.m1ws.com/techno#apourport">
+        <rdfs:domain rdf:resource="http://www.m1ws.com/techno#Composant"/>
+        <rdfs:range rdf:resource="http://www.m1ws.com/techno#PortExtension"/>
+    </rdf:Description>
+
+
+    <!-- Socket -->
+    <rdf:Description rdf:about="http://www.m1ws.com/techno#apoursocket">
+        <rdfs:domain rdf:resource="http://www.m1ws.com/techno#CarteMere"/>
+        <rdfs:range rdf:resource="http://www.m1ws.com/techno#Socket"/>
+    </rdf:Description>
+
+
+    <!-- Connecteur -->
+    <rdf:Description rdf:about="http://www.m1ws.com/techno#connecteur">
+        <rdfs:domain rdf:resource="http://www.m1ws.com/techno#CarteGraphique"/>
+        <rdfs:range rdf:resource="http://www.m1ws.com/techno#ConnecteurVideo"/>
+    </rdf:Description>
+
+
+    <!-- Prix -->
+    <rdf:Description rdf:about="http://www.m1ws.com/techno#apourprix">
+        <rdfs:domain rdf:resource="http://www.m1ws.com/techno#Composant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XLMSchema#float"/>
+    </rdf:Description>
+
+
+
+
+    <!-- INSTANCES -->
+
+    <!-- Carte Mere H77MA -->
+    <rdf:Description rdf:about="http://www.m1ws.com/catalogue#H77MA">
+        <rdf:type rdf:resource="http://www.m1ws.com/techno#CarteMere"/>
+    </rdf:Description>
+
+
+    <!-- Carte graphique GF7800 -->
     <rdf:Description rdf:about="http://www.m1ws.com/catalogue#GF7800">
-        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-        <rdf:subClassOf rdf:resource="#CarteGraphique"/>
+        <rdf:type rdf:resource="http://www.m1ws.com/techno#CarteGraphique"/>
+    </rdf:Description>
 
-         <info:nom>GF7800</info:nom>
 
+    <!-- Connecteur Video -->
+    <rdf:Description rdf:about="http://www.m1ws.com/techno#VGA">
+        <rdf:type rdf:resource="http://www.m1ws.com/techno#ConnecteurVideo"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.m1ws.com/techno#DVI">
+        <rdf:type rdf:resource="http://www.m1ws.com/techno#ConnecteurVideo"/>
+    </rdf:Description>
+
+
+    <!-- Socket -->
+    <rdf:Description rdf:about="http://www.m1ws.com/techno#Socket1155">
+        <rdf:type rdf:resource="http://www.m1ws.com/techno#Socket"/>
     </rdf:Description>
  
+
+    <!-- Port Extension -->
+    <rdf:Description rdf:about="http://www.m1ws.com/techno#PCIExpress16x">
+        <rdf:type rdf:resource="http://www.m1ws.com/techno#PortExtension"/>
+    </rdf:Description>
+    
+
+    <rdf:Description rdf:about="http://www.m1ws.com/techno#PCIExpress1x">
+        <rdf:type rdf:resource="http://www.m1ws.com/techno#PortExtension"/>
+    </rdf:Description>
+    
+
+    <rdf:Description rdf:about="http://www.m1ws.com/techno#PCI">
+        <rdf:type rdf:resource="http://www.m1ws.com/techno#PortExtension"/>
+    </rdf:Description>
+    
+
+
+
+    
 </rdf:RDF>
