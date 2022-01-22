@@ -1,0 +1,41 @@
+Classes 
+
+
+
+http://m1ws/album#photo
+    Instances
+        http://photo/album#protrait
+        http://photo/album#photointerieur
+        http://photo/album/photoexterieur
+
+    
+http://m1ws/album#personne
+
+
+
+
+Propriétés
+
+
+http://m1ws/album#apourtype
+    Domain http://m1ws/album#photo
+    CoDomain  http://m1ws/album#typephoto
+
+
+http://m1ws/album#apourdate
+    Domain  http://m1ws/album#photo
+    Range   http://www.w3.org/2001/XLMSchema#date
+
+
+
+
+
+
+
+Ex 
+
+p1 rdf:type Protrait
+p1 rdf:type Photoexterieur
+
+
+p2 sujet Benoit 

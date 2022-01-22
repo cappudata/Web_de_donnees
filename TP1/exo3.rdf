@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:techno="http://www.m1ws.com/album#">
+
+
+    <!-- CLASSES -->
+    <!-- Album -->
+    <rdf:Description rdf:about="http://www.m1ws.com/album#Album" >
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    </rdf:Description>
+
+
+    <!-- Photo -->
+     <rdf:Description rdf:about="http://www.m1ws.com/album#Photo">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    </rdf:Description>
+
+
+    <!-- Type Photo Portrait -->
+    <rdf:Description rdf:about="http://www.m1ws.com/album#Portrait">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+        <rdfs:subClassOf rdf:resource="http://www.m1ws.com/album#Photo" />
+    </rdf:Description>
+
+
+    <!-- Type Photo interieur -->
+    <rdf:Description rdf:about="http://www.m1ws.com/album#Photo_interieur">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+        <rdfs:subClassOf rdf:resource="http://www.m1ws.com/album#Photo" />
+    </rdf:Description>
+
+
+    <!-- Type Photo extérieur -->
+    <rdf:Description rdf:about="http://www.m1ws.com/album#Photo_exterieur">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+        <rdfs:subClassOf rdf:resource="http://www.m1ws.com/album#Photo" />
+    </rdf:Description>
+
+
+
+    <!-- Personne -->
+    <rdf:Description rdf:about="http://www.m1ws.com/album#Personne">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    </rdf:Description>
+
+
+    <!-- Photographe -->
+    <rdf:Description rdf:about="http://www.m1ws.com/album#Photographe">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+        <rdfs:subClassOf rdf:about="http://www.m1ws.com/album#Personne" />
+    </rdf:Description>
+
+    
+    <!-- Retoucheur -->
+    <rdf:Description rdf:about="http://www.m1ws.com/album#Retoucheur">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+        <rdfs:subClassOf rdf:about="http://www.m1ws.com/album#Personne" />
+    </rdf:Description>
+
+
+
+
+    <!-- PROPRIETES -->
+    <rdf:Description rdf:about="http://www.m1ws.com/album#apourdate">
+        <rdf:type rdf:about="http://www.w3.org/2000/01/rdf-schema#Property" />
+        <rdfs:domain rdf:about="http://www.m1ws.com/album#Photo" />
+        <rdfs:range rdf:about="http://www.w3.org/2001/XLMSchema#date" />
+    </rdf:Description>
+
+
+
+
+
+
+</rdf:RDF
