@@ -56,7 +56,7 @@
     <!-- PROPRIETES -->
     <!-- Nom -->
     <rdf:Description rdf:about="http://www.m1ws.com/techno#apournom">
-        <rdf:type rdf:about="http://www.w3.org/2000/01/rdf-schema#Property" />
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property" />
         <rdfs:domain rdf:resource="http://www.m1ws.com/techno#Composant"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XLMSchema#string"/>
     </rdf:Description>
@@ -64,7 +64,7 @@
 
     <!-- Port -->
     <rdf:Description rdf:about="http://www.m1ws.com/techno#apourport">
-        <rdf:type rdf:about="http://www.w3.org/2000/01/rdf-schema#Property" />
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property" />
         <rdfs:domain rdf:resource="http://www.m1ws.com/techno#Composant"/>
         <rdfs:range rdf:resource="http://www.m1ws.com/techno#PortExtension"/>
     </rdf:Description>
@@ -72,7 +72,7 @@
 
     <!-- Socket -->
     <rdf:Description rdf:about="http://www.m1ws.com/techno#apoursocket">
-        <rdf:type rdf:about="http://www.w3.org/2000/01/rdf-schema#Property" />
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property" />
         <rdfs:domain rdf:resource="http://www.m1ws.com/techno#CarteMere"/>
         <rdfs:range rdf:resource="http://www.m1ws.com/techno#Socket"/>
     </rdf:Description>
@@ -80,7 +80,7 @@
 
     <!-- Connecteur -->
     <rdf:Description rdf:about="http://www.m1ws.com/techno#connecteur">
-        <rdf:type rdf:about="http://www.w3.org/2000/01/rdf-schema#Property" />
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property" />
         <rdfs:domain rdf:resource="http://www.m1ws.com/techno#CarteGraphique"/>
         <rdfs:range rdf:resource="http://www.m1ws.com/techno#ConnecteurVideo"/>
     </rdf:Description>
@@ -88,7 +88,7 @@
 
     <!-- Prix -->
     <rdf:Description rdf:about="http://www.m1ws.com/techno#apourprix">
-        <rdf:type rdf:about="http://www.w3.org/2000/01/rdf-schema#Property" />
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property" />
         <rdfs:domain rdf:resource="http://www.m1ws.com/techno#Composant"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XLMSchema#float"/>
     </rdf:Description>
@@ -96,7 +96,7 @@
 
     <!-- Commentaire Note -->
     <rdf:Description rdf:about="http://www.m1ws.com/techno#commentairenote">
-        <rdf:type rdf:about="http://www.w3.org/2000/01/rdf-schema#Property" />
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property" />
         <rdfs:domain rdf:resource="http://www.m1ws.com/techno#Commentaire"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XLMSchema#float"/>
     </rdf:Description>
@@ -104,7 +104,7 @@
 
     <!-- Commentaire Message -->
     <rdf:Description rdf:about="http://www.m1ws.com/techno#commentairemessage">
-        <rdf:type rdf:about="http://www.w3.org/2000/01/rdf-schema#Property" />
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property" />
         <rdfs:domain rdf:resource="http://www.m1ws.com/techno#Commentaire"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XLMSchema#string"/>
     </rdf:Description>
@@ -112,7 +112,7 @@
 
     <!-- Commentaire Date -->
     <rdf:Description rdf:about="http://www.m1ws.com/techno#commentairedate">
-        <rdf:type rdf:about="http://www.w3.org/2000/01/rdf-schema#Property" />
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property" />
         <rdfs:domain rdf:resource="http://www.m1ws.com/techno#Commentaire"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XLMSchema#date"/>
     </rdf:Description>
@@ -161,6 +161,7 @@
     <!-- Carte Mere H77MA -->
     <rdf:Description rdf:about="http://www.m1ws.com/catalogue#H77MA">
         <rdf:type rdf:resource="http://www.m1ws.com/techno#CarteMere"/>
+
         <techno:apournom rdf:resource="http://www.m1ws.com/techno#apournom">H77MA</techno:apournom>
         <techno:apourprix rdf:resource="http://www.m1ws.com/techno#apourprix">500 </techno:apourprix>
         <techno:apoursocket rdf:resource="http://www.m1ws.com/techno#Socket1155" />
@@ -187,11 +188,8 @@
         <techno:connecteur rdf:resource="http://www.m1ws.com/techno#VGA"/>
         <techno:apourport rdf:resource="http://www.m1ws.com/techno#PCIExpress16x"/>
 
-
         <techno:commentairenote rdf:resource="http://www.m1ws.com/techno#commentairenote">4/5</techno:commentairenote>
         <techno:commentairedate rdf:resource="http://www.m1ws.com/techno#commentairedate">19/01/2022</techno:commentairedate>
         <techno:commentairedate rdf:resource="http://www.m1ws.com/techno#commentairemessage">"C'est une très bonne carte"</techno:commentairedate>
-    </rdf:Description>
-
-    
+    </rdf:Description>  
 </rdf:RDF>

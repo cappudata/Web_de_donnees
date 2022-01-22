@@ -2,7 +2,7 @@
 <rdf:RDF
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns:techno="http://www.m1ws.com/album#">
+    xmlns:album="http://www.m1ws.com/album#">
 
 
     <!-- CLASSES -->
@@ -19,25 +19,31 @@
 
 
     <!-- Type Photo Portrait -->
-    <rdf:Description rdf:about="http://www.m1ws.com/album#Portrait">
+    <rdf:Description rdf:about="http://www.m1ws.com/album#Photo_Portrait">
         <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-        <rdfs:subClassOf rdf:resource="http://www.m1ws.com/album#Photo" />
+        <rdfs:subClassOf rdf:resource="http://www.m1ws.com/album#Photo"/>
     </rdf:Description>
 
 
     <!-- Type Photo interieur -->
     <rdf:Description rdf:about="http://www.m1ws.com/album#Photo_interieur">
         <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-        <rdfs:subClassOf rdf:resource="http://www.m1ws.com/album#Photo" />
+        <rdfs:subClassOf rdf:resource="http://www.m1ws.com/album#Photo"/>
     </rdf:Description>
 
 
     <!-- Type Photo extérieur -->
     <rdf:Description rdf:about="http://www.m1ws.com/album#Photo_exterieur">
         <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-        <rdfs:subClassOf rdf:resource="http://www.m1ws.com/album#Photo" />
+        <rdfs:subClassOf rdf:resource="http://www.m1ws.com/album#Photo"/>
     </rdf:Description>
 
+
+    <!-- Type Photo retouchée -->
+    <rdf:Description rdf:about="http://www.m1ws.com/album#Photo_retouchee">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+        <rdfs:subClassOf rdf:resource="http://www.m1ws.com/album#Photo"/>
+    </rdf:Description>
 
 
     <!-- Personne -->
@@ -49,29 +55,114 @@
     <!-- Photographe -->
     <rdf:Description rdf:about="http://www.m1ws.com/album#Photographe">
         <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-        <rdfs:subClassOf rdf:about="http://www.m1ws.com/album#Personne" />
+        <rdfs:subClassOf rdf:resource="http://www.m1ws.com/album#Personne"/>
     </rdf:Description>
 
     
     <!-- Retoucheur -->
     <rdf:Description rdf:about="http://www.m1ws.com/album#Retoucheur">
         <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-        <rdfs:subClassOf rdf:about="http://www.m1ws.com/album#Personne" />
+        <rdfs:subClassOf rdf:resource="http://www.m1ws.com/album#Personne"/>
     </rdf:Description>
 
 
 
 
     <!-- PROPRIETES -->
+    <!-- Date -->
     <rdf:Description rdf:about="http://www.m1ws.com/album#apourdate">
-        <rdf:type rdf:about="http://www.w3.org/2000/01/rdf-schema#Property" />
-        <rdfs:domain rdf:about="http://www.m1ws.com/album#Photo" />
-        <rdfs:range rdf:about="http://www.w3.org/2001/XLMSchema#date" />
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property" />
+        <rdfs:domain rdf:resource="http://www.m1ws.com/album#Photo" />
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XLMSchema#date"/>
+    </rdf:Description>
+
+    <!-- Nom -->
+    <rdf:Description rdf:about="http://www.m1ws.com/album#apournom">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property" />
+        <rdfs:domain rdf:resource="http://www.m1ws.com/album#Personne" />
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XLMSchema#string" />
     </rdf:Description>
 
 
+    <!-- Auteur -->
+    <rdf:Description rdf:about="http://www.m1ws.com/album#apourauteur">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property" />
+        <rdfs:domain rdf:resource="http://www.m1ws.com/album#Photographe" />
+        <rdfs:range rdf:resource="http://www.m1ws.com/album#Personne" />
+    </rdf:Description>
 
 
+     <!-- Retoucheur (la photo est modifiée par qqun)-->
+    <rdf:Description rdf:about="http://www.m1ws.com/album#apourmodifiee_par">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property" />
+        <rdfs:domain rdf:resource="http://www.m1ws.com/album#Retoucheur" />
+        <rdfs:range rdf:resource="http://www.m1ws.com/album#Personne" />
+    </rdf:Description>
 
 
-</rdf:RDF
+    <!-- Sujet -->
+    <rdf:Description rdf:about="http://www.m1ws.com/album#apoursujet">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property" />
+        <rdfs:domain rdf:resource="http://www.m1ws.com/album#Photo_Portrait" />
+        <rdfs:range rdf:resource="http://www.m1ws.com/album#Personne" />
+    </rdf:Description>
+
+
+    <!-- Photo modifiée (modifier sans connaitre la personne)-->
+    <rdf:Description rdf:about="http://www.m1ws.com/album#apourmodifiee">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property" />
+        <rdfs:domain rdf:resource="http://www.m1ws.com/album#Photo_retouchee" />
+        <rdfs:range rdf:resource="http://www.m1ws.com/album#Photo" />
+    </rdf:Description>
+
+
+    <!-- Nom d'album -->
+    <rdf:Description rdf:about="http://www.m1ws.com/album#apournom_album">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property" />
+        <rdfs:domain rdf:resource="http://www.m1ws.com/album#Album" />
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XLMSchema#string" />
+    </rdf:Description>
+
+
+    <!-- Les photos dans un album -->
+    <rdf:Description rdf:about="http://www.m1ws.com/album#lesphotos">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property" />
+        <rdfs:domain rdf:resource="http://www.m1ws.com/album#Album" />
+        <rdfs:range rdf:resource="http://www.m1ws.com/album#Photo" />
+    </rdf:Description>
+
+
+    <!-- INSTANCES -->
+    <!-- Question 1/Exo4  -->
+    <rdf:Description rdf:about="http://www.m1ws.com/photo#photo1">
+        <rdf:type rdf:resource ="http://www.m1ws.com/album#Photo_interieur"/>
+        <rdf:type rdf:resource ="http://www.m1ws.com/album#Photo_Portrait"/>
+        <rdf:type rdf:resource="http://www.m1ws.com/album#Photo_retouchee"/>
+
+        <rdf:apoursujet rdf:resource="http://www.m1ws.com/album#apoursujet">Arthur</rdf:apoursujet>
+        <rdf:apourdate rdf:resource="http://www.m1ws.com/album#apourdate">22/03/2018</rdf:apourdate>
+    </rdf:Description>
+
+
+    <!-- Question 2/Exo4  -->
+    <rdf:Description rdf:about="http://www.m1ws.com/photo#photo2">
+        <rdf:type rdf:resource="http://www.m1ws.com/album#Photo_exterieur"/>
+        <rdf:type rdf:resource ="http://www.m1ws.com/album#Photo_Portrait"/>
+        <rdf:type rdf:resource="http://www.m1ws.com/album#Photo_retouchee"/>
+
+
+        <rdf:apoursujet rdf:resource="http://www.m1ws.com/album#apoursujet">Benoit</rdf:apoursujet>
+        <rdf:apourauteur rdf:resource="http://www.m1ws.com/album#apourauteur">Benoit</rdf:apourauteur>
+        <rdf:apourmodifiee_par rdf:resource="http://www.m1ws.com/album#apourmodifiee_par">Claude</rdf:apourmodifiee_par>
+    </rdf:Description>
+
+
+    <!-- Question 3/Exo4  -->
+    <rdf:Description rdf:about="http://www.m1ws.com/album#tout">
+        <rdf:type rdf:resource="http://www.m1ws.com/album#Album"/>
+        <rdf:apournom_album rdf:resource="http://www.m1ws.com/album#apournom_album"/>
+        <rdf:lesphotos rdf:resource="http://www.m1ws.com/photo#photo1"/>
+        <rdf:lesphotos rdf:resource="http://www.m1ws.com/photo#photo2"/>
+    </rdf:Description>
+ 
+</rdf:RDF>
