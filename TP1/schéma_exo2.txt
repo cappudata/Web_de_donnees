@@ -40,6 +40,12 @@ http://m1ws/techno#PortExtension
 
 
 
+http://m1ws/techno#Commentaires
+    Instances
+       http://m1ws/techno#Commentaire 
+
+
+
 
 Propriétés
 
@@ -68,3 +74,11 @@ http://m1ws/techno#apourconnecteur
 http://m1ws/techno#apourprix
     Domain http://m1ws/techno#Composant
     Range  http://www.w3.org/2001/XLMSchema#float
+
+
+http://m1ws/techno#apourcommentaire
+    Domain  http://m1ws/techno#Composant
+    Range   http://www.w3.org/2001/XLMSchema#float
+            http://www.w3.org/2001/XLMSchema#date
+            http://www.w3.org/2001/XLMSchema#string
+
