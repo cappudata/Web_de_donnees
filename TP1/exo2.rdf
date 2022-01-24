@@ -162,16 +162,16 @@
     <rdf:Description rdf:about="http://www.m1ws.com/catalogue#H77MA">
         <rdf:type rdf:resource="http://www.m1ws.com/techno#CarteMere"/>
 
-        <techno:apournom rdf:resource="http://www.m1ws.com/techno#apournom">H77MA</techno:apournom>
-        <techno:apourprix rdf:resource="http://www.m1ws.com/techno#apourprix">500 </techno:apourprix>
-        <techno:apoursocket rdf:resource="http://www.m1ws.com/techno#Socket1155" />
+        <techno:apournom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H77MA</techno:apournom>
+        <techno:apourprix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">500 </techno:apourprix>
+        <techno:apoursocket rdf:resource="http://www.m1ws.com/techno#Socket1155"/>
         <techno:apourport rdf:resource="http://www.m1ws.com/techno#PCI" />
         <techno:apourport rdf:resource="http://www.m1ws.com/techno#PCIExpress1x"/>
         <techno:apourport rdf:resource="http://www.m1ws.com/techno#PCIExpress16x"/>
 
-        <techno:commentairenote rdf:resource="http://www.m1ws.com/techno#commentairenote">3.5/5</techno:commentairenote>
-        <techno:commentairedate rdf:resource="http://www.m1ws.com/techno#commentairedate">19/01/2022</techno:commentairedate>
-        <techno:commentairedate rdf:resource="http://www.m1ws.com/techno#commentairemessage">"C'est correcte comme une carte mère"</techno:commentairedate>
+        <techno:commentairenote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.5/5</techno:commentairenote>
+        <techno:commentairedate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19/01/2022</techno:commentairedate>
+        <techno:commentairedate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">"C'est correcte comme une carte mère"</techno:commentairedate>
     </rdf:Description>
 
 
@@ -182,14 +182,14 @@
     <rdf:Description rdf:about="http://www.m1ws.com/catalogue#GF7800">
         <rdf:type rdf:resource="http://www.m1ws.com/techno#CarteGraphique"/>
 
-        <techno:apournom rdf:resource="http://www.m1ws.com/techno#apournom">GF7800</techno:apournom>
-        <techno:apourprix rdf:resource="http://www.m1ws.com/techno#apourprix">800</techno:apourprix>
+        <techno:apournom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GF7800</techno:apournom>
+        <techno:apourprix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">800</techno:apourprix>
         <techno:connecteur rdf:resource="http://www.m1ws.com/techno#DVI"/>
         <techno:connecteur rdf:resource="http://www.m1ws.com/techno#VGA"/>
         <techno:apourport rdf:resource="http://www.m1ws.com/techno#PCIExpress16x"/>
 
-        <techno:commentairenote rdf:resource="http://www.m1ws.com/techno#commentairenote">4/5</techno:commentairenote>
-        <techno:commentairedate rdf:resource="http://www.m1ws.com/techno#commentairedate">19/01/2022</techno:commentairedate>
-        <techno:commentairedate rdf:resource="http://www.m1ws.com/techno#commentairemessage">"C'est une très bonne carte"</techno:commentairedate>
+        <techno:commentairenote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4/5</techno:commentairenote>
+        <techno:commentairedate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19/01/2022</techno:commentairedate>
+        <techno:commentairedate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">"C'est une très bonne carte"</techno:commentairedate>
     </rdf:Description>  
 </rdf:RDF>

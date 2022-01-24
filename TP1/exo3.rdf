@@ -87,16 +87,16 @@
     <!-- Auteur -->
     <rdf:Description rdf:about="http://www.m1ws.com/album#apourauteur">
         <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property" />
-        <rdfs:domain rdf:resource="http://www.m1ws.com/album#Photographe" />
-        <rdfs:range rdf:resource="http://www.m1ws.com/album#Personne" />
+        <rdfs:domain rdf:resource="http://www.m1ws.com/album#Photo" />
+        <rdfs:range rdf:resource="http://www.m1ws.com/album#Photographe" />
     </rdf:Description>
 
 
      <!-- Retoucheur (la photo est modifiée par qqun)-->
     <rdf:Description rdf:about="http://www.m1ws.com/album#apourmodifiee_par">
         <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property" />
-        <rdfs:domain rdf:resource="http://www.m1ws.com/album#Retoucheur" />
-        <rdfs:range rdf:resource="http://www.m1ws.com/album#Personne" />
+        <rdfs:domain rdf:resource="http://www.m1ws.com/album#Photo_retouchee" />
+        <rdfs:range rdf:resource="http://www.m1ws.com/album#Retoucheur" />
     </rdf:Description>
 
 
@@ -106,15 +106,6 @@
         <rdfs:domain rdf:resource="http://www.m1ws.com/album#Photo_Portrait" />
         <rdfs:range rdf:resource="http://www.m1ws.com/album#Personne" />
     </rdf:Description>
-
-
-    <!-- Photo modifiée (modifier sans connaitre la personne)-->
-    <rdf:Description rdf:about="http://www.m1ws.com/album#apourmodifiee">
-        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property" />
-        <rdfs:domain rdf:resource="http://www.m1ws.com/album#Photo_retouchee" />
-        <rdfs:range rdf:resource="http://www.m1ws.com/album#Photo" />
-    </rdf:Description>
-
 
     <!-- Nom d'album -->
     <rdf:Description rdf:about="http://www.m1ws.com/album#apournom_album">
@@ -139,7 +130,7 @@
         <rdf:type rdf:resource ="http://www.m1ws.com/album#Photo_Portrait"/>
         <rdf:type rdf:resource="http://www.m1ws.com/album#Photo_retouchee"/>
 
-        <rdf:apoursujet rdf:resource="http://www.m1ws.com/album#apoursujet">Arthur</rdf:apoursujet>
+        <rdf:apoursujet rdf:datatype="http://www.m1ws.com/album#Personne">Arthur</rdf:apoursujet>
         <rdf:apourdate rdf:resource="http://www.m1ws.com/album#apourdate">22/03/2018</rdf:apourdate>
     </rdf:Description>
 
@@ -151,7 +142,7 @@
         <rdf:type rdf:resource="http://www.m1ws.com/album#Photo_retouchee"/>
 
 
-        <rdf:apoursujet rdf:resource="http://www.m1ws.com/album#apoursujet">Benoit</rdf:apoursujet>
+        <rdf:apoursujet rdf:datatype="http://www.m1ws.com/album#Personne">Benoit</rdf:apoursujet>
         <rdf:apourauteur rdf:resource="http://www.m1ws.com/album#apourauteur">Benoit</rdf:apourauteur>
         <rdf:apourmodifiee_par rdf:resource="http://www.m1ws.com/album#apourmodifiee_par">Claude</rdf:apourmodifiee_par>
     </rdf:Description>
