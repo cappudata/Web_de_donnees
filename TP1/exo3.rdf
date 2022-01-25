@@ -123,6 +123,7 @@
     </rdf:Description>
 
 
+
     <!-- INSTANCES -->
     <!-- Question 1/Exo4  -->
     <rdf:Description rdf:about="http://www.m1ws.com/photo#photo1">
@@ -130,9 +131,17 @@
         <rdf:type rdf:resource ="http://www.m1ws.com/album#Photo_Portrait"/>
         <rdf:type rdf:resource="http://www.m1ws.com/album#Photo_retouchee"/>
 
-        <rdf:apoursujet rdf:datatype="http://www.m1ws.com/album#Personne">Arthur</rdf:apoursujet>
-        <rdf:apourdate rdf:resource="http://www.m1ws.com/album#apourdate">22/03/2018</rdf:apourdate>
+
+        <rdf:Description rdf:about="http://www.m1ws.com/album#personne1">
+            <rdf:type rdf:resource="http://www.m1ws.com/album#Personne"/>
+            <rdf:apournom rdf:resource="http://www.w3.org/2001/XMLSchema#string">Arthur</rdf:apournom>
+        </rdf:Description>
+
+
+        <album:apoursujet rdf:resource="http://www.m1ws.com/album#personne1"/>
+        <album:apourdate rdf:resource="http://www.m1ws.com/album#apourdate">22/03/2018</rdf:apourdate>
     </rdf:Description>
+
 
 
     <!-- Question 2/Exo4  -->
@@ -142,18 +151,19 @@
         <rdf:type rdf:resource="http://www.m1ws.com/album#Photo_retouchee"/>
 
 
-        <rdf:apoursujet rdf:datatype="http://www.m1ws.com/album#Personne">Benoit</rdf:apoursujet>
-        <rdf:apourauteur rdf:resource="http://www.m1ws.com/album#apourauteur">Benoit</rdf:apourauteur>
-        <rdf:apourmodifiee_par rdf:resource="http://www.m1ws.com/album#apourmodifiee_par">Claude</rdf:apourmodifiee_par>
+        <album:apoursujet rdf:datatype="http://www.m1ws.com/album#Personne">Benoit</rdf:apoursujet>
+        <album:apourauteur rdf:resource="http://www.m1ws.com/album#apourauteur">Benoit</rdf:apourauteur>
+        <album:apourmodifiee_par rdf:resource="http://www.m1ws.com/album#apourmodifiee_par">Claude</rdf:apourmodifiee_par>
     </rdf:Description>
 
 
     <!-- Question 3/Exo4  -->
     <rdf:Description rdf:about="http://www.m1ws.com/album#tout">
         <rdf:type rdf:resource="http://www.m1ws.com/album#Album"/>
-        <rdf:apournom_album rdf:resource="http://www.m1ws.com/album#apournom_album"/>
-        <rdf:lesphotos rdf:resource="http://www.m1ws.com/photo#photo1"/>
-        <rdf:lesphotos rdf:resource="http://www.m1ws.com/photo#photo2"/>
+
+        <album:apournom_album rdf:resource="http://www.m1ws.com/album#apournom_album"/>
+        <album:lesphotos rdf:resource="http://www.m1ws.com/photo#photo1"/>
+        <album:lesphotos rdf:resource="http://www.m1ws.com/photo#photo2"/>
     </rdf:Description>
  
 </rdf:RDF>
