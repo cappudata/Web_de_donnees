@@ -1,0 +1,15 @@
+ 
+bin/sparql --data=doc/Tutorial/vc-db-1.rdf --query=doc/Tutorial/q1.rq
+
+
+$JENA_HOME/bin/sparql --data=
+$JENA_HOME/bin/sparql --query=./query_exo1.8.sparql
+
+
+SELECT ?p ?o ?s 
+FROM <personnes.n3> FROM <acteurs.n3>
+WHERE {
+    ?uri ?p ?o .}
+    UNION 
+    { ?s ?p ?uri .}
+}

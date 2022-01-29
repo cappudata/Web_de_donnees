@@ -1,0 +1,16 @@
+PREFIX mv:<http://exemple.fr/mv#>
+
+SELECT ?nompers ?naissance ?nomacteur ?naissance_acteur
+FROM <personnes.n3>
+FROM NAMED <acteurs.n3>
+WHERE {
+    ?pers mv:nom ?nompers.
+    OPTIONAL { ?pers mv:naissance ?naissance. }
+
+    GRAPH <acteurs.n3> {
+        ?acteurs mv:nom ?nomacteur.
+        ?acteurs mv:role ?pers .
+        ?acteurs mv:naissance ?naissance_acteur.
+    }
+    FILTER (?naissance < ?naissance_acteur)
+}

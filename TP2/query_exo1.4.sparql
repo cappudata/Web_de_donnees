@@ -1,0 +1,9 @@
+PREFIX mv:<http://exemple.fr/mv#>
+
+SELECT ?pers ?nom
+FROM <personnes.n3>
+WHERE {
+    ?pers mv:nom ?nom .
+    ?pers_dirige mv:nom "Walter Skinner".
+    ?pers_dirige mv:dirige ?pers .
+}

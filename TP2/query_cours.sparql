@@ -1,0 +1,17 @@
+PREFIX mv:<http://exemple.fr/mv#>
+
+
+SELECT ?pers ?nompers ?acteurs ?nomacteur ?naissance
+FROM <personnes.n3>
+FROM NAMED <acteurs.n3>
+WHERE {
+    ?pers mv:nom ?nompers .
+    GRAPH <acteurs.n3> {
+        ?acteurs mv:role ?pers.
+        ?acteurs mv:nom ?nomacteur.
+        OPTIONAL {?acteurs mv:naissance ?naissance.}
+    }
+}
+
+ORDER BY ?nompers
+    

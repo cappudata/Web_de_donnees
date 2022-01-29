@@ -1,0 +1,14 @@
+PREFIX mv:<http://exemple.fr/mv#>
+
+SELECT ?sujet ?predicat ?objet
+FROM <personnes.n3>
+FROM NAMED <acteurs.n3>
+WHERE {
+    {   ?sujet mv:nom "Dana Scully".
+        ?sujet ?predicat ?objet. } 
+    
+    UNION 
+    {  ?sujet ?predicat ?objet.
+       ?objet mv:nom "Dana Scully". }
+    
+}
