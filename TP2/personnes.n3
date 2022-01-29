@@ -15,9 +15,13 @@ mv:bm mv:nom "Bill Mulder" ;
 
 mv:ds mv:nom "Dana Scully" ;
 	mv:famille mv:Scully ;
+	mv:naissance "1964"^^xsd:gYear ;
 	mv:travailleavec mv:fm .
 
 mv:ws mv:nom "Walter Skinner" ;
 	mv:dirige mv:fm ;
 	mv:dirige mv:ds .
 
+mv:ak mv:nom "Alex Krycek" ;
+	mv:travailleavec mv:fm ;
+	mv:dirige mv:ws .

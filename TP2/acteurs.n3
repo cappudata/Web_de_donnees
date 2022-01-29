@@ -7,4 +7,12 @@ mv:dd mv:nom "David Duchovny" ;
 	mv:naissance "1960"^^xsd:gYear .
 
 mv:ga mv:nom "Gillian Anderson" ;
+	mv:naissance "1968"^^xsd:gYear ;
 	mv:role mv:ds.
+
+mv:mp mv:nom "Mitch Pileggi" ;
+	mv:role mv:ws.
+
+mv:nl mv:nom "Nicholas Lea" ;
+	mv:naissance "1952"^^xsd:gYear ;
+	mv:role mv:ak.

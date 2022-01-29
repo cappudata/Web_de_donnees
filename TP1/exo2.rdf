@@ -94,6 +94,15 @@
     </rdf:Description>
 
 
+
+    <!-- comment -->
+    <rdf:Description rdf:about="http://www.m1ws.com/techno#comment">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property" />
+        <rdfs:domain rdf:resource="http://www.m1ws.com/techno#Commentaire"/>
+        <rdfs:range rdf:resource="http://www.m1ws.com/techno#Composant" />
+    </rdf:Description>
+
+
     <!-- Commentaire Note -->
     <rdf:Description rdf:about="http://www.m1ws.com/techno#commentairenote">
         <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property" />
@@ -157,6 +166,14 @@
 
 
 
+    <rdf:Description rdf:about="http://www.m1ws.com/catalogue#comment#1">
+        <rdf:type rdf:resource="http://www.m1ws.com/techno#Commentaire"/>
+
+        <techno:commentairenote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.5</techno:commentairenote>
+        <techno:commentairedate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">19/01/2022</techno:commentairedate>
+        <techno:commentairemessage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">"C'est correcte comme une carte mère"</techno:commentairemessage>
+    </rdf:Description>
+
 
     <!-- Carte Mere H77MA -->
     <rdf:Description rdf:about="http://www.m1ws.com/catalogue#H77MA">
@@ -168,13 +185,20 @@
         <techno:apourport rdf:resource="http://www.m1ws.com/techno#PCI" />
         <techno:apourport rdf:resource="http://www.m1ws.com/techno#PCIExpress1x"/>
         <techno:apourport rdf:resource="http://www.m1ws.com/techno#PCIExpress16x"/>
-
-        <techno:commentairenote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.5/5</techno:commentairenote>
-        <techno:commentairedate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19/01/2022</techno:commentairedate>
-        <techno:commentairedate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">"C'est correcte comme une carte mère"</techno:commentairedate>
+        <techno:comment rdf:resource="http://www.m1ws.com/catalogue#comment#1"/>
     </rdf:Description>
 
 
+
+
+
+    <rdf:Description rdf:about="http://www.m1ws.com/catalogue#comment#2">
+        <rdf:type rdf:resource="http://www.m1ws.com/techno#Commentaire"/>
+
+        <techno:commentairenote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4.5</techno:commentairenote>
+        <techno:commentairedate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">19/01/2022</techno:commentairedate>
+        <techno:commentairemessage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">"C'est une très bonne carte"</techno:commentairemessage>
+    </rdf:Description>
 
 
 
@@ -187,9 +211,6 @@
         <techno:connecteur rdf:resource="http://www.m1ws.com/techno#DVI"/>
         <techno:connecteur rdf:resource="http://www.m1ws.com/techno#VGA"/>
         <techno:apourport rdf:resource="http://www.m1ws.com/techno#PCIExpress16x"/>
-
-        <techno:commentairenote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4/5</techno:commentairenote>
-        <techno:commentairedate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19/01/2022</techno:commentairedate>
-        <techno:commentairedate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">"C'est une très bonne carte"</techno:commentairedate>
+        <techno:comment rdf:resource="http://www.m1ws.com/catalogue#comment#2" />
     </rdf:Description>  
 </rdf:RDF>
