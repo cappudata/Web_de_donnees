@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:techno="http://www.m1ws.com/techno#"
+    xmlns:catalogue="http://www.m1ws.com/catalogue#"
+    xmlns:commentaire="http://www.m1ws.com/commentaire#">
+
+
+    <!-- INSTANCES -->
+
+    <!-- Connecteur Video -->
+    <rdf:Description rdf:about="http://www.m1ws.com/techno#VGA">
+        <rdf:type rdf:resource="http://www.m1ws.com/techno#ConnecteurVideo"/>
+    </rdf:Description>
+
+
+    <rdf:Description rdf:about="http://www.m1ws.com/techno#DVI">
+        <rdf:type rdf:resource="http://www.m1ws.com/techno#ConnecteurVideo"/>
+    </rdf:Description>
+
+
+    <!-- Socket -->
+    <rdf:Description rdf:about="http://www.m1ws.com/techno#Socket1155">
+        <rdf:type rdf:resource="http://www.m1ws.com/techno#Socket"/>
+    </rdf:Description>
+ 
+
+    <!-- Port Extension -->
+    <rdf:Description rdf:about="http://www.m1ws.com/techno#PCIExpress16x">
+        <rdf:type rdf:resource="http://www.m1ws.com/techno#PortExtension"/>
+    </rdf:Description>
+    
+
+    <rdf:Description rdf:about="http://www.m1ws.com/techno#PCIExpress1x">
+        <rdf:type rdf:resource="http://www.m1ws.com/techno#PortExtension"/>
+    </rdf:Description>
+    
+
+    <rdf:Description rdf:about="http://www.m1ws.com/techno#PCI">
+        <rdf:type rdf:resource="http://www.m1ws.com/techno#PortExtension"/>
+    </rdf:Description>
+    
+
+    <rdf:Description rdf:about="http://www.m1ws.com/techno#AGP">
+        <rdf:type rdf:resource="http://www.m1ws.com/techno#PortExtension"/>
+    </rdf:Description>
+    
+
+    <!-- Commentaire 1 -->
+    <rdf:Description rdf:about="http://www.m1ws.com/commentaire#commentaire1">
+        <rdf:type rdf:resource="http://www.m1ws.com/commentaire#Commentaire"/>
+        <commentaire:commentairenote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.5</commentaire:commentairenote>
+        <commentaire:commentairedate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-01-19</commentaire:commentairedate>
+        <commentaire:commentairemessage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bonne carte mere</commentaire:commentairemessage>
+    </rdf:Description>
+
+
+    <!-- Commentaire 2 -->
+    <rdf:Description rdf:about="http://www.m1ws.com/commentaire#commentaire2">
+        <rdf:type rdf:resource="http://www.m1ws.com/commentaire#Commentaire"/>
+
+        <commentaire:commentairenote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4.5</commentaire:commentairenote>
+        <commentaire:commentairedate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-01-19</commentaire:commentairedate>
+        <commentaire:commentairemessage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bonne carte graphique</commentaire:commentairemessage>
+    </rdf:Description>
+
+
+
+
+    <!-- Carte Mere H77MA -->
+    <rdf:Description rdf:about="http://www.m1ws.com/catalogue#H77MA">
+        <rdf:type rdf:resource="http://www.m1ws.com/techno#CarteMere"/>
+        <techno:apournom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H77MA</techno:apournom>
+        <techno:apourprix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">500 </techno:apourprix>
+        <techno:apoursocket rdf:resource="http://www.m1ws.com/techno#Socket1155"/>
+        <techno:apourport rdf:resource="http://www.m1ws.com/techno#PCI" />
+        <techno:apourport rdf:resource="http://www.m1ws.com/techno#PCIExpress1x"/>
+        <techno:apourport rdf:resource="http://www.m1ws.com/techno#PCIExpress16x"/>
+        <commentaire:commentaire rdf:resource="http://www.m1ws.com/commentaire#commentaire1"/>
+    </rdf:Description>
+
+
+    <!--  Carte Mere P4P800 -->
+    <rdf:Description rdf:about="http://www.m1ws.com/catalogue#P4P800">
+        <rdf:type rdf:resource="http://www.m1ws.com/techno#CarteMere"/>
+        <techno:apournom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P4P800</techno:apournom>
+        <techno:apourport rdf:resource="http://www.m1ws.com/techno#AGP"/>
+        <techno:apourport rdf:resource="http://www.m1ws.com/techno#PCI"/>
+    </rdf:Description>
+
+
+
+
+    <!-- Carte graphique GF5200 -->
+    <rdf:Description rdf:about="http://www.m1ws.com/catalogue#GF5200">
+        <rdf:type rdf:resource="http://www.m1ws.com/techno#CarteGraphique"/>
+        <techno:apournom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GF5200</techno:apournom>
+        <techno:connecteur rdf:resource="http://www.m1ws.com/techno#VGA"/>
+        <techno:apourport rdf:resource="http://www.m1ws.com/techno#AGP"/>
+    </rdf:Description>  
+
+
+
+    <!-- Carte graphique GF7800 -->
+    <rdf:Description rdf:about="http://www.m1ws.com/catalogue#GF7800">
+        <rdf:type rdf:resource="http://www.m1ws.com/techno#CarteGraphique"/>
+        <techno:apournom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GF7800</techno:apournom>
+        <techno:apourprix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">800</techno:apourprix>
+        <techno:connecteur rdf:resource="http://www.m1ws.com/techno#DVI"/>
+        <techno:connecteur rdf:resource="http://www.m1ws.com/techno#VGA"/>
+        <techno:apourport rdf:resource="http://www.m1ws.com/techno#PCIExpress16x"/>
+        <commentaire:commentaire rdf:resource="http://www.m1ws.com/catalogue#comment2" />
+    </rdf:Description>  
+
+</rdf:RDF>
