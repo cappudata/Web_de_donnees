@@ -3,7 +3,8 @@
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:techno="http://www.m1ws.com/techno#"
-    xmlns:catalogue="http://www.m1ws.com/catalogue#">
+    xmlns:catalogue="http://www.m1ws.com/catalogue#"
+    xmlns:commentaire="http://www.m1ws.com/commentaire#">
 
     <!-- CLASSES -->
     <!-- Composant -->
@@ -45,7 +46,7 @@
 
 
     <!-- Commentaire -->
-    <rdf:Description rdf:about="http://www.m1ws.com/techno#Commentaire">
+    <rdf:Description rdf:about="http://www.m1ws.com/commentaire#Commentaire">
         <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class" />
     </rdf:Description>
 
@@ -95,8 +96,8 @@
 
 
 
-    <!-- comment -->
-    <rdf:Description rdf:about="http://www.m1ws.com/techno#comment">
+    <!-- commentaire -->
+    <rdf:Description rdf:about="http://www.m1ws.com/commentaire#commentaire">
         <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property" />
         <rdfs:domain rdf:resource="http://www.m1ws.com/techno#Commentaire"/>
         <rdfs:range rdf:resource="http://www.m1ws.com/techno#Composant" />
@@ -104,7 +105,7 @@
 
 
     <!-- Commentaire Note -->
-    <rdf:Description rdf:about="http://www.m1ws.com/techno#commentairenote">
+    <rdf:Description rdf:about="http://www.m1ws.com/commentaire#commentairenote">
         <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property" />
         <rdfs:domain rdf:resource="http://www.m1ws.com/techno#Commentaire"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XLMSchema#float"/>
@@ -112,7 +113,7 @@
 
 
     <!-- Commentaire Message -->
-    <rdf:Description rdf:about="http://www.m1ws.com/techno#commentairemessage">
+    <rdf:Description rdf:about="http://www.m1ws.com/commentaire#commentairemessage">
         <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property" />
         <rdfs:domain rdf:resource="http://www.m1ws.com/techno#Commentaire"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XLMSchema#string"/>
@@ -120,7 +121,7 @@
 
 
     <!-- Commentaire Date -->
-    <rdf:Description rdf:about="http://www.m1ws.com/techno#commentairedate">
+    <rdf:Description rdf:about="http://www.m1ws.com/commentaire#commentairedate">
         <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property" />
         <rdfs:domain rdf:resource="http://www.m1ws.com/techno#Commentaire"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XLMSchema#date"/>
@@ -166,12 +167,12 @@
 
 
 
-    <rdf:Description rdf:about="http://www.m1ws.com/catalogue#comment#1">
-        <rdf:type rdf:resource="http://www.m1ws.com/techno#Commentaire"/>
+    <rdf:Description rdf:about="http://www.m1ws.com/commentaire#commentaire1">
+        <rdf:type rdf:resource="http://www.m1ws.com/commentaire#Commentaire"/>
 
-        <techno:commentairenote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.5</techno:commentairenote>
-        <techno:commentairedate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">19/01/2022</techno:commentairedate>
-        <techno:commentairemessage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">"C'est correcte comme une carte mère"</techno:commentairemessage>
+        <commentaire:commentairenote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.5</commentaire:commentairenote>
+        <commentaire:commentairedate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-01-19</commentaire:commentairedate>
+        <commentaire:commentairemessage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C'est correcte comme une carte mère</commentaire:commentairemessage>
     </rdf:Description>
 
 
@@ -185,19 +186,19 @@
         <techno:apourport rdf:resource="http://www.m1ws.com/techno#PCI" />
         <techno:apourport rdf:resource="http://www.m1ws.com/techno#PCIExpress1x"/>
         <techno:apourport rdf:resource="http://www.m1ws.com/techno#PCIExpress16x"/>
-        <techno:comment rdf:resource="http://www.m1ws.com/catalogue#comment#1"/>
+        <commentaire:commentaire rdf:resource="http://www.m1ws.com/commentaire#commentaire1"/>
     </rdf:Description>
 
 
 
 
 
-    <rdf:Description rdf:about="http://www.m1ws.com/catalogue#comment#2">
-        <rdf:type rdf:resource="http://www.m1ws.com/techno#Commentaire"/>
+    <rdf:Description rdf:about="http://www.m1ws.com/commentaire#commentaire2">
+        <rdf:type rdf:resource="http://www.m1ws.com/commentaire#Commentaire"/>
 
-        <techno:commentairenote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4.5</techno:commentairenote>
-        <techno:commentairedate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">19/01/2022</techno:commentairedate>
-        <techno:commentairemessage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">"C'est une très bonne carte"</techno:commentairemessage>
+        <commentaire:commentairenote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4.5</commentaire:commentairenote>
+        <commentaire:commentairedate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-01-19</commentaire:commentairedate>
+        <commentaire:commentairemessage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C'est une très bonne carte</commentaire:commentairemessage>
     </rdf:Description>
 
 
@@ -211,6 +212,6 @@
         <techno:connecteur rdf:resource="http://www.m1ws.com/techno#DVI"/>
         <techno:connecteur rdf:resource="http://www.m1ws.com/techno#VGA"/>
         <techno:apourport rdf:resource="http://www.m1ws.com/techno#PCIExpress16x"/>
-        <techno:comment rdf:resource="http://www.m1ws.com/catalogue#comment#2" />
+        <commentaire:commentaire rdf:resource="http://www.m1ws.com/catalogue#comment2" />
     </rdf:Description>  
 </rdf:RDF>
