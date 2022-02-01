@@ -1,0 +1,15 @@
+#TP2 exo5 question 1
+
+PREFIX album:<http://www.m1ws.com/album#>
+PREFIX personne:<http://www.m1ws.com/personne#>
+
+
+SELECT ?uri ?photo ?nom
+FROM <exo3_data.rdf>
+WHERE {
+    ?uri album:lesphotos ?photo .
+    ?photo album:apoursujet ?sujet.
+    ?photo album:apourauteur ?sujet.
+    ?sujet personne:apournom ?nom .
+
+}

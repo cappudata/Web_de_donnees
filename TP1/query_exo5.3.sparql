@@ -1,0 +1,16 @@
+#TP2 exo5 question 3
+
+PREFIX album:<http://www.m1ws.com/album#>
+PREFIX personne:<http://www.m1ws.com/personne#>
+
+
+SELECT ?uri ?photo (YEAR(?date) AS ?annee) ?date
+FROM <exo3_data.rdf>
+WHERE {
+    ?uri album:lesphotos ?photo .
+    OPTIONAL {?photo album:apourdate ?date. }
+}
+
+#ici je ne sais pas comment faire pour extraire l'année
+#à revoir
+# le code java ne marche pas 

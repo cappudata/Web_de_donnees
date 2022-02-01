@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:album="http://www.m1ws.com/album#"
+    xmlns:personne="http://www.m1ws.com/personne#">
+
+    <!-- INSTANCES -->
+    <!-- Question 1/Exo4  -->
+
+    <rdf:Description rdf:about="http://www.m1ws.com/personne#personne1">
+        <rdf:type rdf:resource="http://www.m1ws.com/personne#Personne"/>
+        <personne:apournom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arthur</personne:apournom>
+    </rdf:Description>
+
+
+    <rdf:Description rdf:about="http://www.m1ws.com/personne#personne2">
+        <rdf:type rdf:resource="http://www.m1ws.com/personne#Personne"/>
+        <personne:apournom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Benoit</personne:apournom>
+    </rdf:Description>
+
+
+    <rdf:Description rdf:about="http://www.m1ws.com/personne#personne3">
+        <rdf:type rdf:resource="http://www.m1ws.com/personne#Personne"/>
+        <personne:apournom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Claude</personne:apournom>
+    </rdf:Description>
+
+
+
+    <rdf:Description rdf:about="http://www.m1ws.com/photo#photo1">
+        <rdf:type rdf:resource ="http://www.m1ws.com/album#Photo_interieur"/>
+        <rdf:type rdf:resource ="http://www.m1ws.com/album#Photo_Portrait"/>
+        <rdf:type rdf:resource="http://www.m1ws.com/album#Photo_retouchee"/>
+
+        <album:apoursujet rdf:resource="http://www.m1ws.com/personne#personne1"/>
+        <album:apourauteur rdf:resource="http://www.m1ws.com/personne#personne2"/>
+        <album:apourdate rdf:datatype="http://www.w3.org/2001/XLMSchema#date">2018-01-22</album:apourdate>
+    </rdf:Description>
+
+
+    <!-- Question 2/Exo4  -->
+
+    <rdf:Description rdf:about="http://www.m1ws.com/photo#photo2">
+        <rdf:type rdf:resource="http://www.m1ws.com/album#Photo_exterieur"/>
+        <rdf:type rdf:resource ="http://www.m1ws.com/album#Photo_Portrait"/>
+        <rdf:type rdf:resource="http://www.m1ws.com/album#Photo_retouchee"/>
+
+
+        <album:apoursujet rdf:resource="http://www.m1ws.com/personne#personne2"/>
+        <album:apourauteur rdf:resource="http://www.m1ws.com/personne#personne2"/>
+        <album:apourmodifiee_par rdf:resource="http://www.m1ws.com/personne#personne3"/>
+    </rdf:Description>
+
+
+    <!-- Question 3/Exo4  -->
+
+
+    <rdf:Description rdf:about="http://www.m1ws.com/album#tout">
+        <rdf:type rdf:resource="http://www.m1ws.com/album#Album"/>
+
+        <album:apournom_album rdf:datatype="http://www.w3.org/2001/XLMSchema#string">tout</album:apournom_album>
+        <album:lesphotos rdf:resource="http://www.m1ws.com/photo#photo1"/>
+        <album:lesphotos rdf:resource="http://www.m1ws.com/photo#photo2"/>
+    </rdf:Description>
+
+
+    <rdf:Description rdf:about="http://www.m1ws.com/album#album1">
+        <rdf:type rdf:resource="http://www.m1ws.com/album#Album"/>
+
+        <album:apournom_album rdf:datatype="http://www.w3.org/2001/XLMSchema#string">tout</album:apournom_album>
+        <album:lesphotos rdf:resource="http://www.m1ws.com/photo#photo1"/>
+    </rdf:Description>
+ 
+</rdf:RDF>

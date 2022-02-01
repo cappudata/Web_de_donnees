@@ -1,0 +1,13 @@
+#Exo 3 question 3 du TP2
+
+PREFIX techno: <http://www.m1ws.com/techno#>
+PREFIX catalogue: <http://www.m1ws.com/catalogue#>
+
+
+
+
+SELECT ?nom ?uri
+FROM <exo2_data.rdf>
+WHERE {
+    ?uri techno:apournom ?nom .
+}

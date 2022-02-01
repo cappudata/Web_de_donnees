@@ -1,0 +1,13 @@
+#TP2 exo5 question 2
+
+PREFIX album:<http://www.m1ws.com/album#>
+PREFIX personne:<http://www.m1ws.com/personne#>
+
+
+SELECT ?uri ?photo ?nom_retoucher
+FROM <exo3_data.rdf>
+WHERE {
+    ?uri album:lesphotos ?photo .
+    OPTIONAL { ?photo album:apourmodifiee_par ?retoucher .
+                ?retoucher personne:apournom ?nom_retoucher .}
+}
